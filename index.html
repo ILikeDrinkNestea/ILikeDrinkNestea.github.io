@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-    <head>
-        <meta charset="UTF-8">
-        <title>待辦事項實作(原版)</title>
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="todo-container">
-            <h1>待辦事項清單</h1>
-            <input type="text" id="todo-input" placeholder="請輸入待辦事項">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待辦事項實作(生成式AI優化版)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1>待辦事項清單</h1>
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="請輸入待辦事項...">
             <input type="datetime-local" id="todo-time">
             <button onclick="addTodo()">確定新增</button>
-            <ul id="todo-list"></ul>
         </div>
-    </body>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

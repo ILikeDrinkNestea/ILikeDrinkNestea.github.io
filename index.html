@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>待辦事項實作(生成式AI優化版)</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="todo-container">
-        <h1>待辦事項清單</h1>
-        <div class="input-group">
-            <input type="text" id="todo-input" placeholder="請輸入待辦事項...">
-            <input type="datetime-local" id="todo-time">
-            <button onclick="addTodo()">確定新增</button>
-        </div>
-        <ul id="todo-list"></ul>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <title>業師課程最終成果</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-    <script src="script.js"></script>
-</body>
+    <body>
+        <nav class="navbar">
+            <div class="logo" id="main-logo">14116104 業師課程</div>
+            <ul class="nav-link">
+                <li><a href="#">首頁</a></li>
+                <li><a href="#todo-section">待辦事項</a></li>
+                <li><a href="#">課程成果</a></li>
+                <li><a href="#">關於我</a></li>
+                <li><a href="#" class="btn-chat">AI 小助手</a></li>
+            </ul>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-content">
+                <h1 id="hero-title">歡迎來到 <span class="highlight">Nestor</span> 的業師課程成果</h1>
+                <p>這是業師課程的最終成果頁面，整合 HTML、CSS、JavaScript 與 6/11 課程進度的待辦事項實作功能。</p>
+
+                <div class="chat-box">
+                    <input type="text" id="user-input" placeholder="輸入指令，例如：新增待辦 交作業 2026-06-20 09:00">
+                    <button id="send-btn" class="btn-primary">送出</button>
+                </div>
+                <p id="ai-response">AI 回覆：請輸入指令，我可以幫你設定待辦事項。</p>
+
+                <div class="todo-container" id="todo-section">
+                    <h2>待辦事項</h2>
+                    <div class="todo-form">
+                        <input type="text" id="todo-input" placeholder="請輸入待辦事項">
+                        <input type="datetime-local" id="todo-time">
+                        <button class="btn-primary" onclick="addTodo()">新增待辦</button>
+                    </div>
+                    <ul id="todo-list"></ul>
+                </div>
+
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="changeColor()">變更顏色</button>
+                    <button class="btn-secondary">查看更多</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="AI 科技示意圖">
+            </div>
+        </header>
+        <script src="./java.js"></script>
+        <script>(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="XkDgXHt9tsOLj2xz4hGDD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();</script>
+    </body>
 </html>
